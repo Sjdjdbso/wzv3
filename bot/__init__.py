@@ -820,6 +820,14 @@ else:
     qb_client.app_set_preferences(qb_opt)
 
 log_info("Creating client from BOT_TOKEN")
+import asyncio
+
+# Memaksa pembuatan event loop untuk kompatibilitas Python 3.10+
+try:
+    loop = asyncio.get_running_loop()
+except RuntimeError:
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
 bot = wztgClient('bot', TELEGRAM_API, TELEGRAM_HASH, bot_token=BOT_TOKEN, workers=1000,
                parse_mode=enums.ParseMode.HTML).start()
 bot_loop = bot.loop
