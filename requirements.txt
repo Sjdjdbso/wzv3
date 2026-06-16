@@ -39,6 +39,7 @@ requests
 speedtest-cli
 telegraph
 tenacity
+tzlocal
 tgcrypto
 tzlocal
 uv
