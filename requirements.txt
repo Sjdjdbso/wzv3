@@ -40,6 +40,7 @@ speedtest-cli
 telegraph
 tenacity
 tgcrypto
+tzlocal
 uv
 uvloop
 xattr
